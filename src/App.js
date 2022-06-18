@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css';
 import MainPage from "./Components/MainPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 
