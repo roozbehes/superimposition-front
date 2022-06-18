@@ -1,7 +1,7 @@
 import React from "react";
 import AppChart from "./AppChart";
 import AppMenu from "./Menu";
-import Loading from "./LoadingPage";
+// import Loading from "./LoadingPage";
 import "./App.css";
 
 class MainPage extends React.Component {
@@ -10,16 +10,17 @@ class MainPage extends React.Component {
     this.state = {
       results: {},
       results_recieved: false,
-      isLoading:false
+      // isLoading:false
     };
   }
 
-  handleLoading = (stat)=>{
-    this.setState({...this.state , isLoading : stat});
-  }
+  // handleLoading = (stat)=>{
+  //   this.setState({...this.state , isLoading : stat});
+  // }
 
   handleResult = (res) => {
-    this.setState({ ...this.state, isLoading : false, results_recieved: false });
+    // , isLoading : false
+    this.setState({ ...this.state, results_recieved: false });
     if (res !== undefined) {
       this.setState({
         results: res[0],
