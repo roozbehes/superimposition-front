@@ -74,7 +74,7 @@ class AppMenu extends React.Component {
     // let url = "http://127.0.0.1:5000/model";
 
     let url = "https://superimposition-backend.herokuapp.com/model";
-    
+    this.props.handleLoading(true);
     axios
       .post(
         url,
