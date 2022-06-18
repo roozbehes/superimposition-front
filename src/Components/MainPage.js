@@ -1,7 +1,6 @@
 import React from "react";
 import AppChart from "./AppChart";
 import AppMenu from "./Menu";
-// import Loading from "./LoadingPage";
 import "./App.css";
 
 class MainPage extends React.Component {
@@ -10,16 +9,10 @@ class MainPage extends React.Component {
     this.state = {
       results: {},
       results_recieved: false,
-      // isLoading:false
     };
   }
 
-  // handleLoading = (stat)=>{
-  //   this.setState({...this.state , isLoading : stat});
-  // }
-
   handleResult = (res) => {
-    // , isLoading : false
     this.setState({ ...this.state, results_recieved: false });
     if (res !== undefined) {
       this.setState({
@@ -40,7 +33,7 @@ class MainPage extends React.Component {
           </div>
           <div className="row">
             <div className="col-lg-3 mt-1 b-2 border rounded border-4">
-              <AppMenu handleLoading={this.handleLoading} handleResult={this.handleResult} />
+              <AppMenu handleResult={this.handleResult} />
             </div>
             <div className="col-lg-9 mt-1">
               <h3 className="text-center border-bottom border-4 pb-2 mb-2">
@@ -58,10 +51,6 @@ class MainPage extends React.Component {
             </div>
           </div>
         </div>
-        {/* {
-          this.state.isLoading?
-          <Loading/>:""
-        } */}
       </div>
     );
   }
